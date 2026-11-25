@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsiCrim | Portfolio de Morena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <div class="lienzo-editorial">
+        
+        <!-- Encabezado estilo ficha / portada -->
+        <header class="cabecera-ficha">
+            <div class="marca">
+                <span class="sello" aria-hidden="true">🧠</span>
+                <span class="nombre-sitio">PsiCrim — Archivo &amp; Portfolio</span>
+            </div>
+            <nav aria-label="Navegación rápida">
+                <a href="#quien-sos">¿Quién sos?</a>
+                <a href="#que-haces">¿Qué hacés?</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#preguntas">Preguntas</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Saludo inicial conversacional -->
+            <section id="inicio" class="intro-conversacional">
+                <p class="etiqueta-dialogo">VISITANTE —</p>
+                <h1>¿Hola? ¿PsiCrim?</h1>
+                
+                <div class="respuesta-directa">
+                    <p class="etiqueta-dialogo">MORENA —</p>
+                    <p class="lead">
+                        ¡Hola! Bienvenido a <strong>PsiCrim</strong>. Soy Morena, y este es mi espacio de Psicología Criminal y Forense.
+                    </p>
+                    <p class="cita-editorial">
+                        “Comprender la mente detrás de la conducta para aportar claridad, evidencia científica y rigor a los procesos judiciales.”
+                    </p>
+                    <p class="indicacion">Explorá la conversación haciendo clic en cada pregunta:</p>
+                </div>
+            </section>
+
+            <!-- Bloque Interactivo 1: Sobre mí -->
+            <section id="quien-sos" class="bloque-pregunta">
+                <details open>
+                    <summary class="pregunta-gatillo">
+                        <span class="numero">01</span>
+                        <span class="texto-pregunta">¿Quién sos y cuál es tu enfoque?</span>
+                        <span class="icono-estado" aria-hidden="true">×</span>
+                    </summary>
+                    <div class="contenido-respuesta">
+                        <p>
+                            Soy <strong>Morena</strong>, estudiante de 6° año interesada en el área de la <strong>Psicología</strong>, específicamente enfocada en el ámbito criminal y judicial. Me considero una persona <strong>emocional, reflexiva y decidida</strong>.
+                        </p>
+                        <div class="caja-destacada">
+                            <strong>Objetivo a futuro:</strong> Formarme profesionalmente para trabajar en casos policiales y judiciales, estudiando la conducta delictiva y brindando análisis rigurosos para procesos legales y defensa.
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <!-- Bloque Interactivo 2: Habilidades -->
+            <section id="que-haces" class="bloque-pregunta">
+                <details>
+                    <summary class="pregunta-gatillo">
+                        <span class="numero">02</span>
+                        <span class="texto-pregunta">Ok. ¿Y qué sabés hacer?</span>
+                        <span class="icono-estado" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="contenido-respuesta">
+                        <p>Combino el análisis metodológico en psicología con herramientas técnicas y digitales:</p>
+                        <ul class="grilla-habilidades">
+                            <li>
+                                <strong>Análisis reflexivo</strong>
+                                <span>Resolución de problemas complejos y evaluación de variables conductuales.</span>
+                            </li>
+                            <li>
+                                <strong>Investigación estructurada</strong>
+                                <span>Redacción de informes académicos, revisión bibliográfica y protocolos.</span>
+                            </li>
+                            <li>
+                                <strong>Robótica y Maquetas</strong>
+                                <span>Diseño y armado de maquetas técnicas y prototipos físicos.</span>
+                            </li>
+                            <li>
+                                <strong>Programación (Arduino)</strong>
+                                <span>Desarrollo básico para sistemas interactivos y sensores.</span>
+                            </li>
+                            <li>
+                                <strong>Desarrollo Web</strong>
+                                <span>Maquetación semántica y diseño editorial con HTML5 y CSS3.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+
+            <!-- Bloque Interactivo 3: Proyectos (Con tarjetas estilo expediente / modal CSS) -->
+            <section id="proyectos" class="bloque-pregunta">
+                <details open>
+                    <summary class="pregunta-gatillo">
+                        <span class="numero">03</span>
+                        <span class="texto-pregunta">Entiendo. ¿Qué proyectos desarrollaste?</span>
+                        <span class="icono-estado" aria-hidden="true">×</span>
+                    </summary>
+                    <div class="contenido-respuesta">
+                        <p>Estos son tres trabajos seleccionados de investigación y análisis aplicados al ámbito forense y criminológico. Seleccioná cada expediente para ver el detalle completo:</p>
+
+                        <div class="lista-expedientes">
+                            <!-- Expediente 1 -->
+                            <details class="expediente">
+                                <summary class="cabecera-expediente">
+                                    <span class="tag-expediente">EXPEDIENTE 01</span>
+                                    <h3>Análisis de perfiles psicológicos y conductuales de personas con conducta delictiva</h3>
+                                    <span class="ver-mas">Abrir ficha →</span>
+                                </summary>
+                                <div class="cuerpo-expediente">
+                                    <div class="fila-dato">
+                                        <h4>Problema</h4>
+                                        <p>La falta de análisis sistemático de factores psicológicos, sociales y conductuales dificulta comprender los patrones asociados a determinadas conductas delictivas.</p>
+                                    </div>
+                                    <div class="fila-dato">
+                                        <h4>Mi participación</h4>
+                                        <ul>
+                                            <li>Investigué antecedentes científicos sobre comportamiento criminal.</li>
+                                            <li>Analicé casos hipotéticos e identifiqué variables psicológicas y sociales.</li>
+                                            <li>Clasifiqué patrones conductuales y elaboré perfiles criminológicos académicos.</li>
+                                            <li>Participé en la elaboración de conclusiones e informes.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="columnas-dobles">
+                                        <div class="fila-dato">
+                                            <h4>Tecnologías</h4>
+                                            <ul>
+                                                <li><strong>Excel:</strong> organización y comparación de variables.</li>
+                                                <li><strong>SPSS:</strong> análisis estadístico de datos simulados.</li>
+                                                <li><strong>Google Scholar:</strong> búsqueda de investigaciones científicas.</li>
+                                                <li><strong>Zotero:</strong> gestión de referencias bibliográficas.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="fila-dato">
+                                            <h4>Evidencia</h4>
+                                            <ul>
+                                                <li>Matriz comparativa de casos.</li>
+                                                <li>Perfiles conductuales académicos.</li>
+                                                <li>Informe de análisis criminológico.</li>
+                                                <li>Presentación de resultados.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="fila-dato aprendizaje">
+                                        <h4>Aprendizaje clave</h4>
+                                        <p>Comprendí los factores psicológicos y sociales asociados a la conducta delictiva, aprendí a diferenciar factores de riesgo de características individuales y reconocí las limitaciones de la perfilación criminal para evitar conclusiones deterministas.</p>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- Expediente 2 -->
+                            <details class="expediente">
+                                <summary class="cabecera-expediente">
+                                    <span class="tag-expediente">EXPEDIENTE 02</span>
+                                    <h3>Evaluación psicológica de víctimas de violencia</h3>
+                                    <span class="ver-mas">Abrir ficha →</span>
+                                </summary>
+                                <div class="cuerpo-expediente">
+                                    <div class="fila-dato">
+                                        <h4>Problema y Solución</h4>
+                                        <p><strong>Problema:</strong> Las consecuencias psicológicas de la violencia pueden pasar inadvertidas o documentarse de manera insuficiente, dificultando la atención integral de las víctimas.</p>
+                                        <p><strong>Solución:</strong> Diseñar una propuesta de evaluación psicológica que contemple antecedentes, entrevistas, indicadores emocionales y herramientas de evaluación pertinentes.</p>
+                                    </div>
+                                    <div class="fila-dato">
+                                        <h4>Mi participación</h4>
+                                        <ul>
+                                            <li>Investigué las consecuencias psicológicas de diferentes formas de violencia.</li>
+                                            <li>Analicé indicadores de ansiedad, estrés y afectación emocional.</li>
+                                            <li>Colaboré en el diseño de una ficha de evaluación.</li>
+                                            <li>Elaboré recomendaciones para una atención sensible al trauma.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="columnas-dobles">
+                                        <div class="fila-dato">
+                                            <h4>Tecnologías</h4>
+                                            <ul>
+                                                <li><strong>Google Forms:</strong> diseño de formularios académicos.</li>
+                                                <li><strong>Excel:</strong> organización de información.</li>
+                                                <li><strong>Zotero:</strong> gestión bibliográfica.</li>
+                                                <li><strong>Instrumentos psicométricos:</strong> PCL-5 y BDI-II (sujetos a requisitos de aplicación).</li>
+                                            </ul>
+                                        </div>
+                                        <div class="fila-dato">
+                                            <h4>Evidencia</h4>
+                                            <ul>
+                                                <li>Ficha de evaluación psicológica.</li>
+                                                <li>Matriz de indicadores emocionales.</li>
+                                                <li>Revisión bibliográfica.</li>
+                                                <li>Propuesta de protocolo de atención.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="fila-dato aprendizaje">
+                                        <h4>Aprendizaje clave</h4>
+                                        <p>Comprendí las consecuencias psicológicas de la violencia, la victimización y revictimización, la importancia de la escucha activa, la confidencialidad y el uso de instrumentos validados.</p>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- Expediente 3 -->
+                            <details class="expediente">
+                                <summary class="cabecera-expediente">
+                                    <span class="tag-expediente">EXPEDIENTE 03</span>
+                                    <h3>Análisis de credibilidad del testimonio y memoria de testigos</h3>
+                                    <span class="ver-mas">Abrir ficha →</span>
+                                </summary>
+                                <div class="cuerpo-expediente">
+                                    <div class="fila-dato">
+                                        <h4>Problema y Solución</h4>
+                                        <p><strong>Problema:</strong> La memoria humana puede verse influenciada por el estrés, la sugestión, el tiempo transcurrido y la información de terceros, afectando la precisión de los testimonios.</p>
+                                        <p><strong>Solución:</strong> Diseñar una propuesta de análisis del testimonio basada en conocimientos científicos sobre memoria y entrevistas no sugestivas.</p>
+                                    </div>
+                                    <div class="fila-dato">
+                                        <h4>Mi participación</h4>
+                                        <ul>
+                                            <li>Investigué los procesos cognitivos relacionados con la memoria.</li>
+                                            <li>Analicé factores que pueden alterar los recuerdos.</li>
+                                            <li>Comparé metodologías de entrevista.</li>
+                                            <li>Elaboré un protocolo académico de entrevista no sugestiva.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="columnas-dobles">
+                                        <div class="fila-dato">
+                                            <h4>Tecnologías</h4>
+                                            <ul>
+                                                <li><strong>Google Forms:</strong> simulación de ejercicios académicos.</li>
+                                                <li><strong>Excel:</strong> clasificación de respuestas.</li>
+                                                <li><strong>Atlas.ti:</strong> análisis cualitativo de información.</li>
+                                                <li><strong>Google Scholar:</strong> consulta de investigaciones científicas.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="fila-dato">
+                                            <h4>Evidencia</h4>
+                                            <ul>
+                                                <li>Protocolo de entrevista.</li>
+                                                <li>Cuadro comparativo de metodologías.</li>
+                                                <li>Matriz de factores que afectan la memoria.</li>
+                                                <li>Informe sobre psicología del testimonio.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="fila-dato aprendizaje">
+                                        <h4>Aprendizaje clave</h4>
+                                        <p>Comprendí cómo funciona la memoria humana, identifiqué factores de sugestión, diferencié exactitud del recuerdo de consistencia narrativa y entendí que la credibilidad no depende solo del lenguaje corporal.</p>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <!-- Bloque Interactivo 4: Preguntas Frecuentes (Estilo Q&A de John Henry Müller) -->
+            <section id="preguntas" class="bloque-pregunta">
+                <details>
+                    <summary class="pregunta-gatillo">
+                        <span class="numero">04</span>
+                        <span class="texto-pregunta">Mmm. ¿Puedo hacer otras preguntas?</span>
+                        <span class="icono-estado" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="contenido-respuesta">
+                        <p>¡Preguntá lo que quieras! Reuní algunas dudas habituales sobre este proyecto y mi formación:</p>
+                        
+                        <div class="muro-preguntas">
+                            <details class="pildora-faq">
+                                <summary>¿Qué es PsiCrim y cuál es su objetivo?</summary>
+                                <p>Es mi espacio profesional, enfocado en la Psicología Criminal y Forense. Busca aportar claridad, evidencia científica y rigor al análisis de la conducta en procesos judiciales.</p>
+                            </details>
+
+                            <details class="pildora-faq">
+                                <summary>¿A qué público está dirigido este espacio?</summary>
+                                <p>Está pensado para personas interesadas en el ámbito legal, judicial y psicológico, incluyendo estudios jurídicos, abogados defensores y profesionales vinculados a la investigación criminal, tanto en el estudio de la víctima como del victimario.</p>
+                            </details>
+
+                            <details class="pildora-faq">
+                                <summary>¿Qué tipo de proyectos puedo encontrar acá?</summary>
+                                <p>Incluye trabajos académicos y técnicos realizados durante mi formación secundaria, abarcando investigaciones en psicología forense, análisis criminológico y proyectos interdisciplinarios con robótica, programación y desarrollo web.</p>
+                            </details>
+
+                            <details class="pildora-faq">
+                                <summary>¿Dónde te formaste o proyectás estudiar?</summary>
+                                <p>Formación proyectada en la Universidad Nacional de Córdoba (UNC) y posteriormente la Especialización en Psicología Jurídica en la UNC.</p>
+                            </details>
+
+                            <details class="pildora-faq">
+                                <summary>¿Este sitio está hecho solo con HTML y CSS?</summary>
+                                <p>¡Sí! Siguiendo una estética editorial pura: estructura semántica en HTML5 y desplegables nativos con <code>&lt;details&gt;</code> y CSS3, sin necesidad de JavaScript complejo.</p>
+                            </details>
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <!-- Bloque Interactivo 5: Contacto -->
+            <section id="contacto" class="bloque-pregunta bloque-cierre">
+                <details open>
+                    <summary class="pregunta-gatillo">
+                        <span class="numero">05</span>
+                        <span class="texto-pregunta">¡Genial! ¿Cómo nos ponemos en contacto?</span>
+                        <span class="icono-estado" aria-hidden="true">×</span>
+                    </summary>
+                    <div class="contenido-respuesta">
+                        <p>Si querés conocer más sobre mis trabajos o contactarme por proyectos académicos, podés escribirme por estos medios:</p>
+                        <div class="tarjetas-contacto">
+                            <div class="dato-contacto">
+                                <span class="etiqueta">CORREO ELECTRÓNICO</span>
+                                <a href="mailto:morenayulan50@gmail.com">morenayulan50@gmail.com</a>
+                            </div>
+                            <div class="dato-contacto">
+                                <span class="etiqueta">REPOSITORIO GITHUB</span>
+                                <span>https://github.com/morenayulan</span>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </section>
+        </main>
+
+        <footer class="pie-editorial">
+            <p>&copy; 2026 PsiCrim — Morena. Aplicaciones Informáticas II (6° E).</p>
+            <p class="nota-pie">Diseño editorial conversacional en HTML5 &amp; CSS3.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

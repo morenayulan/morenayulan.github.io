@@ -1,0 +1,421 @@
+/* ==========================================================================
+   PsiCrim — Estilo Editorial Conversacional (Inspirado en John Henry Müller)
+   Monocromático, alto contraste, HTML + CSS puro sin JS
+   ========================================================================== */
+
+:root {
+    --color-papel: #F7F6F2;        /* Blanco hueso / papel editorial */
+    --color-superficie: #FFFFFF;   /* Blanco puro para fichas abiertas */
+    --color-tinta: #141414;        /* Negro tinta profundo */
+    --color-tinta-suave: #4A4A4A;  /* Gris oscuro para textos secundarios */
+    --color-borde: #141414;        /* Líneas finas de alto contraste */
+    --color-acento: #E6E3DA;       /* Tono arena suave para estados hover */
+    
+    --fuente-titulo: 'Abril Fatface', Georgia, serif;
+    --fuente-cuerpo: 'Merriweather', Georgia, serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--color-papel);
+    color: var(--color-tinta);
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.75;
+    padding: 2rem 1rem;
+}
+
+/* Contenedor principal tipo pliego editorial */
+.lienzo-editorial {
+    max-width: 820px;
+    margin: 0 auto;
+    background-color: var(--color-papel);
+}
+
+/* Cabecera */
+.cabecera-ficha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid var(--color-borde);
+    margin-bottom: 3rem;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.cabecera-ficha nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.cabecera-ficha nav a {
+    color: var(--color-tinta);
+    text-decoration: none;
+    font-size: 0.85rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.cabecera-ficha nav a:hover {
+    border-bottom-color: var(--color-tinta);
+}
+
+/* Introducción conversacional */
+.intro-conversacional {
+    margin-bottom: 3.5rem;
+}
+
+.etiqueta-dialogo {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--color-tinta-suave);
+    margin-bottom: 0.4rem;
+}
+
+.intro-conversacional h1 {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
+    line-height: 1.05;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+}
+
+.respuesta-directa {
+    background-color: var(--color-superficie);
+    border: 1.5px solid var(--color-borde);
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 5px 5px 0px var(--color-borde);
+}
+
+.respuesta-directa .lead {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+}
+
+.cita-editorial {
+    font-style: italic;
+    color: var(--color-tinta-suave);
+    border-left: 3px solid var(--color-borde);
+    padding-left: 1rem;
+    margin: 1.2rem 0;
+}
+
+.indicacion {
+    font-size: 0.85rem;
+    color: var(--color-tinta-suave);
+    margin-top: 1rem;
+}
+
+/* Bloques de diálogo desplegables (estilo John Henry Müller) */
+.bloque-pregunta {
+    margin-bottom: 1.5rem;
+}
+
+.bloque-pregunta > details {
+    background-color: var(--color-superficie);
+    border: 1.5px solid var(--color-borde);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bloque-pregunta > details[open] {
+    box-shadow: 5px 5px 0px var(--color-borde);
+}
+
+.pregunta-gatillo {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.4rem 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: var(--color-superficie);
+    transition: background-color 0.2s ease;
+}
+
+.pregunta-gatillo::-webkit-details-marker {
+    display: none;
+}
+
+.pregunta-gatillo:hover {
+    background-color: var(--color-acento);
+}
+
+.numero {
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: 1px solid var(--color-borde);
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+}
+
+.texto-pregunta {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.3rem, 3vw, 1.75rem);
+    line-height: 1.2;
+    flex-grow: 1;
+}
+
+.icono-estado {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+details[open] > .pregunta-gatillo .icono-estado {
+    transform: rotate(90deg);
+}
+
+.contenido-respuesta {
+    padding: 1.8rem;
+    border-top: 1.5px solid var(--color-borde);
+    background-color: var(--color-superficie);
+}
+
+.contenido-respuesta > p {
+    margin-bottom: 1.2rem;
+}
+
+/* Caja destacada dentro de respuestas */
+.caja-destacada {
+    background-color: var(--color-papel);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Grilla de habilidades */
+.grilla-habilidades {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.grilla-habilidades li {
+    background-color: var(--color-papel);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.grilla-habilidades li span {
+    font-size: 0.88rem;
+    color: var(--color-tinta-suave);
+}
+
+/* Expedientes / Proyectos interactivos */
+.lista-expedientes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.expediente {
+    border: 1.5px solid var(--color-borde);
+    border-radius: 10px;
+    background-color: var(--color-papel);
+}
+
+.cabecera-expediente {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.cabecera-expediente::-webkit-details-marker {
+    display: none;
+}
+
+.cabecera-expediente:hover {
+    background-color: var(--color-acento);
+}
+
+.tag-expediente {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--color-tinta-suave);
+}
+
+.cabecera-expediente h3 {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.ver-mas {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-top: 0.2rem;
+}
+
+.cuerpo-expediente {
+    padding: 1.5rem;
+    background-color: var(--color-superficie);
+    border-top: 1.5px solid var(--color-borde);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.fila-dato h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+    color: var(--color-tinta-suave);
+}
+
+.fila-dato p,
+.fila-dato li {
+    font-size: 0.92rem;
+}
+
+.fila-dato ul {
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.columnas-dobles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    padding: 1rem;
+    background-color: var(--color-papel);
+    border-radius: 8px;
+    border: 1px solid var(--color-borde);
+}
+
+.aprendizaje {
+    border-top: 1px dashed var(--color-borde);
+    padding-top: 1rem;
+}
+
+/* Muro de preguntas frecuentes (Píldoras interactivas) */
+.muro-preguntas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.pildora-faq {
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    background-color: var(--color-papel);
+}
+
+.pildora-faq summary {
+    cursor: pointer;
+    padding: 0.9rem 1.2rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.pildora-faq summary:hover {
+    background-color: var(--color-acento);
+}
+
+.pildora-faq p {
+    padding: 0.9rem 1.2rem 1.1rem;
+    border-top: 1px solid var(--color-borde);
+    background-color: var(--color-superficie);
+    font-size: 0.92rem;
+}
+
+/* Contacto */
+.tarjetas-contacto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.dato-contacto {
+    background-color: var(--color-papel);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.dato-contacto .etiqueta {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-tinta-suave);
+}
+
+.dato-contacto a {
+    color: var(--color-tinta);
+    font-weight: 700;
+    word-break: break-all;
+}
+
+/* Pie de página */
+.pie-editorial {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--color-borde);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-tinta-suave);
+}
+
+/* Ajustes móviles */
+@media (max-width: 600px) {
+    .pregunta-gatillo {
+        padding: 1.1rem 1.2rem;
+    }
+    .contenido-respuesta,
+    .respuesta-directa {
+        padding: 1.3rem;
+    }
+}
